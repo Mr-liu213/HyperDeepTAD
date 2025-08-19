@@ -51,7 +51,6 @@ python all_gk.py
 cd model
 python model.py
 #predicted
-cd ../predicted
 load_model.ipynb
 ```
 
