@@ -1,0 +1,22 @@
+{
+  "resolution": [25000, 50000, 100000],
+  "chrom_list": [
+    "chr1", "chr2", "chr3", "chr4", "chr5", 
+    "chr6", "chr7", "chr8", "chr9", "chr10", 
+    "chr11", "chr12", "chr13", "chr14", "chr15", 
+    "chr16", "chr17", "chr18", "chr19", "chr20", 
+    "chr21", "chr22"
+  ],
+  "temp_dir1": "./bin_mapping",
+  "temp_dir2": "./edge_lists",
+  "temp_dir3": "./Sort",
+  "temp_dir4": "./result",
+  "temp_dir5": "./All_count",
+  "temp_dir6": "./hypergraph",
+  "cluster_path": "/public_data/liukaihua/Article/data_pre_processing/HiPore-C_filt.clusters",
+  "chrom_size": "/public_data/liukaihua/Article/data_pre_processing/hg38.chrom.sizes.txt",
+  "max_cluster_size": 25,
+  "k-mer_size": [2,3,4,5,6,7],
+  "min_freq_cutoff": 1
+
+}
