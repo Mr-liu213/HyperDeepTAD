@@ -44,7 +44,12 @@ python sort.py
 python gk.py
 python all_gk.py
 ```
+4.label
 
+```python
+cd model
+python label.py
+```
 ## Third --Model
 
 ```python
