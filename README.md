@@ -44,7 +44,7 @@ python sort.py
 python gk.py
 python all_gk.py
 ```
-4.label
+4.Label the matrix with corresponding tags
 
 ```python
 cd model
