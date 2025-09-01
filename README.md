@@ -43,6 +43,7 @@ python chr.py
 python sort.py
 python gk.py
 python all_gk.py
+python bg.py
 ```
 4.Label the matrix with corresponding tags
 
