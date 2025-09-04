@@ -11,15 +11,15 @@ from sklearn.utils.class_weight import compute_class_weight
 
 gpus = tf.config.list_physical_devices('GPU')
 if gpus:
-    print(f"可用 GPU: {[gpu.name for gpu in gpus]}")
+    print(f"Available GPUs: {[gpu.name for gpu in gpus]}")
 else:
-    print("无可用 GPU，将使用 CPU")
+    print("No available GPUs; CPU will be used.")
 if gpus:
     try:      
         tf.config.set_visible_devices(gpus[4], 'GPU')
        
         visible_devices = tf.config.get_visible_devices('GPU')
-        print(f"已指定使用 GPU: {[d.name for d in visible_devices]}")
+        print(f"GPU usage has been specified.: {[d.name for d in visible_devices]}")
     except RuntimeError as e:
       
         print(e)
@@ -27,7 +27,7 @@ if gpus:
     try:
         for gpu in gpus:
             tf.config.experimental.set_memory_growth(gpu, True)
-        print("已启用 GPU 内存动态增长")
+        print("Dynamic GPU memory growth has been enabled.")
     except RuntimeError as e:
         print(e)
 
