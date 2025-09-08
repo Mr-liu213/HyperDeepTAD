@@ -1,4 +1,4 @@
-# HyperDeepTAD: A method for constructing hypergraphs based on high-order reads and combining deep learning models to identify TADs
+# HyperDeepTAD: A Topologically Associated Domains detection method based on Pore-C reads and deep learning
 
 
 
