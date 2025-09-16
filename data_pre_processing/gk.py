@@ -85,15 +85,15 @@ if not os.path.exists(temp_directory4):
 physical_devices = tf.config.list_physical_devices('GPU')
 if physical_devices:
     tf.config.experimental.set_memory_growth(physical_devices[0], True)
-    print("使用GPU加速")
+    print("Using GPU acceleration")
 else:
-    print("使用CPU计算")
+    print("Calculate using the CPU")
 
 
 for chromosome_index in range(len(chromosome_list)):
     for resolution in resolution_list:
         # load chromosome range data
-        print(f"加载 {int(resolution/1000)}KB_chrom_ranges.npy")
+        print(f"Loading {int(resolution/1000)}KB_chrom_ranges.npy")
         chromosome_range = np.load(os.path.join(temp_directory1, f"{int(resolution/1000)}KB_chrom_ranges.npy"))
         chromosome_range = chromosome_range[chromosome_index]
         node_count = np.max(chromosome_range) + 1
@@ -143,13 +143,13 @@ for chromosome_index in range(len(chromosome_list)):
                         processed_clusters.append(batch_clusters.numpy())
                         cluster_frequency_list.append(batch_frequencies.numpy())
                     
-                    print(f"剩余批次: {remaining_batches}")
+                    print(f"Remaining batches: {remaining_batches}")
             
             if processed_clusters:
                 all_clusters = np.concatenate(processed_clusters, axis=0)
                 all_frequencies = np.concatenate(cluster_frequency_list, axis=0)
                 print()
-                print(f"组合结果形状: {all_clusters.shape}")
+                print(f"Combined result shape: {all_clusters.shape}")
                 
                 # Save the results
                 output_path = os.path.join(
